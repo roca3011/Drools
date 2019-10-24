@@ -1,0 +1,11 @@
+package KieRule;
+
+import com.demo.tienda.model.Producto;
+
+rule "Puntos"
+
+when
+producto : Producto(tipoProducto=="aseo");
+then
+producto.setPuntos((int)producto.getPrecioProducto() * 2);
+end;
