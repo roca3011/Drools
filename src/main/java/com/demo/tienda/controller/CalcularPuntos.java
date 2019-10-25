@@ -24,6 +24,10 @@ public class CalcularPuntos {
 	public CalcularPuntos() {
 	}
 	
+	public CalcularPuntos(KieSession session) {
+		this.session = session;
+	}
+	
 	public Producto obtenerPuntos(Producto producto) {
 		session.insert(producto);
 		session.fireAllRules();
